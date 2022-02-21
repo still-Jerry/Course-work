@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form3
+    partial class AddNewUsers
     {
         /// <summary>
         /// Required designer variable.

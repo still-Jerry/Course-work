@@ -27,14 +27,33 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            var result = MessageBox.Show("Вы уверены, что хотите покинуть данную страницу и сохранить все изменеия?", "Сохранение изменений",
+                                 MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                File.Delete("Сотрудники1.txt");
+               
+                using (StreamWriter writer = new StreamWriter("Сотрудники1.txt", true, Encoding.GetEncoding("windows-1251")))
+                //using (StreamWriter writer = File.AppendText("Сотрудники.txt"))
+                {
+                    for (int i = 0; i < listBox3.Items.Count; i++)
+                    {
+                        writer.WriteLine(listBox3.Items[i]);
+                    }
+                    
+
+                } 
+            }
+            
+            MainForm f = new MainForm();
             f.Show();
             this.Hide();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form3 f = new Form3();
+            AddNewUsers f = new AddNewUsers();
             f.Show();
             this.Hide();
         }

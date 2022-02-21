@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
                 if (fl == 1)
                 {
                     fl = 0;
-                    Form1 f = new Form1();
+                    MainForm f = new MainForm();
                     f.Show();
                     this.Hide();
                 }

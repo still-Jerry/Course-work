@@ -7,57 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using System.IO;
 namespace WindowsFormsApplication1
 {
-    public partial class Form3 : Form
+    public partial class Form8 : Form
     {
-
-        public Form3()
+        public Form8()
         {
             InitializeComponent();
+            Form7.fl1 = true;
         }
 
-        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form8_FormClosing(object sender, FormClosingEventArgs e)
         {
             Form7 f = new Form7();
             f.Show();
             this.Hide();
         }
-        private string GetPassword() {
-            string abc = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*()"; //набор символов
-            Random rnd = new Random();
-            int kol = rnd.Next(5, 20); ; // кол-во символов
-            string result = null;
 
-            int lng = abc.Length;
-            for (int i = 0; i < kol; i++)
-                result += abc[rnd.Next(lng)];
-            return result;
-            }
-        private string GetLogin()
-        {
-            string abc = "1234567890qwertyuiopasdfghjklzxcvbnm"; //набор символов
-            Random rnd = new Random();
-            int kol = rnd.Next(3, 15); ; // кол-во символов
-            string result = null;
-
-            int lng = abc.Length;
-            for (int i = 0; i < kol; i++)
-                result += abc[rnd.Next(lng)];
-            return result+"@com";
-        }
-        private void CleanFloders() {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            comboBox1.Text = "";
-            comboBox2.Text = "";
-            dateTimePicker1.Text = "";
-            dateTimePicker2.Text = "";
-            
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -72,10 +39,11 @@ namespace WindowsFormsApplication1
                     using (StreamWriter writer = new StreamWriter("Сотрудники.txt", true, Encoding.GetEncoding("windows-1251")))
                     //using (StreamWriter writer = File.AppendText("Сотрудники.txt"))
                     {
-
-                        string password = GetPassword();
-                        string usr = null;
-                        string login = GetLogin();
+                        String[] subsw = null;
+                        subsw = Form7.userInfo.Split(';');
+                        string login = subsw[6];
+                        string password = subsw[7];
+                        string usr = subsw[8];
 
                         if (checkBox1.Checked == true)
                         {
@@ -90,12 +58,12 @@ namespace WindowsFormsApplication1
                         string userInfo = textBox1.Text + ';' + comboBox2.Text + ';' + dateTimePicker2.Text + ';' +
                            dateTimePicker1.Text + ';' + textBox2.Text + ';' + textBox3.Text + ';' + comboBox1.Text + ';' +
                            login + ';' + password + ';' + usr;
-                        writer.WriteLine(userInfo);
-                        MessageBox.Show("Пользователь успешно добавлен!");
-                        CleanFloders();
+                        //writer.WriteLine(userInfo);
+                        Form7.userInfo = userInfo;
+                        MessageBox.Show("Пользователь успешно обновлён!");
                     }
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -104,6 +72,29 @@ namespace WindowsFormsApplication1
             }
         }
 
-       
+        public void Form8_Load(object sender, EventArgs e)
+        {
+            String[] subsw = null;
+            subsw = Form7.userInfo.Split(';');
+
+            textBox1.Text = subsw[0];
+            comboBox2.Text = subsw[1];
+            dateTimePicker2.Text = subsw[2];
+            dateTimePicker1.Text = subsw[3];
+            textBox2.Text = subsw[4];
+            comboBox1.Text = subsw[5];
+            string login = subsw[6];
+            string password = subsw[7];
+            string usr = subsw[8];
+            if (usr == "администатор")
+            {
+                checkBox1.Checked = true;
+            }
+            else
+            {
+                checkBox1.Checked = false;
+
+            }
+        }
     }
 }
