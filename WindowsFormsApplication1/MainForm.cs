@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1
                         {
                             dataGridViewPreparats.Columns.Add(subs[i], subs[i]);
                             dataGridViewPreparats.Font = new Font("Verbena", 8);
-                            dataGridViewPreparats.Columns[i].Width = 70;
+                            dataGridViewPreparats.Columns[i].Width = 75;
                             comboBox1.Items.Add(subs[i]);
 
                         }
@@ -102,7 +102,72 @@ namespace WindowsFormsApplication1
                     }
                     else {
                         dataGridViewPreparats.Rows.Add(subs);
-                    
+                        DateTime dateTime =  Convert.ToDateTime(subs[7]);
+                        if (subs[6].Contains("д")){
+                            string[] day = subs[6].Split('д');
+                            dateTime.AddDays(Convert.ToInt32(day[0]));
+                        }
+                        else if (subs[6].Contains("м")){
+                            string[] month = subs[6].Split('м');
+                            dateTime.AddMonths(Convert.ToInt32(month[0]));
+                        }
+                        else if (subs[6].Contains("г")){
+                            string[] years = subs[6].Split('г');
+                            dateTime.AddYears(Convert.ToInt32(years[0]));
+                        }
+
+                        if (dateTime < DateTime.Today)
+                        {
+                            int conclyse = Convert.ToInt32(subs[2]) * Convert.ToInt32(subs[3]);
+                            string[] supply2 = { subs[0], subs[1], subs[6], subs[7], subs[3], Convert.ToString(conclyse) };
+
+                            dataGridDelay.Rows.Add(supply2);
+                        }
+                    }
+
+                }
+
+            }
+            find = new StreamReader("Заказы.txt", Encoding.GetEncoding(1251));
+            //using (StreamReader find = File.OpenText("Сотрудники.txt"))
+            using (find)
+            {
+                String input = null;
+                Boolean ah = true;
+                while ((input = find.ReadLine()) != null)
+                {
+                    string[] subs = input.Split(';');
+                    //int conclyse = Convert.ToInt32(subs[3]) + Convert.ToInt32(subs[2]);
+                    if (ah)
+                    {
+                        for (int i = 0; i < 7; i++)
+                        {
+                            dataGridSupplierReport.Font = new Font("Verbena", 8);
+                            dataGridSupplierReport.Columns[i].Width = 90;
+
+                            
+                        }
+                        for (int i = 0; i < 5; i++)
+                        {
+                            dataGridPreparationsBranch.Font = new Font("Verbena", 8);
+                            dataGridPreparationsBranch.Columns[i].Width = 100;
+                            dataGridDelay.Font = new Font("Verbena", 8);
+                            dataGridDelay.Columns[i].Width = 100;
+                        }
+                        ah = false;
+                    }
+                    else
+                    {
+                        int conclyse = Convert.ToInt32(subs[6])*Convert.ToInt32(subs[5]) + Convert.ToInt32(subs[4]);
+                        string[] supply = { subs[3], subs[1], subs[2], subs[6], subs[5], subs[4], Convert.ToString(conclyse) };
+
+                        dataGridSupplierReport.Rows.Add(supply);
+
+                        string[] supply1 = { subs[7], subs[2], subs[5], subs[6], subs[4], Convert.ToString(conclyse) };
+
+                        dataGridPreparationsBranch.Rows.Add(supply1);
+
+
                     }
 
                 }
