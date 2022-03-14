@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsignmentNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsignmentNote.Designer.cs">
+      <DependentUpon>ConsignmentNote.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,58 +62,22 @@
     <Compile Include="Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewUsers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddNewUsers.Designer.cs">
-      <DependentUpon>AddNewUsers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UsersList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsersList.Designer.cs">
-      <DependentUpon>UsersList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditingUsers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditingUsers.Designer.cs">
-      <DependentUpon>EditingUsers.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConsignmentNote.resx">
+      <DependentUpon>ConsignmentNote.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddNewUsers.resx">
-      <DependentUpon>AddNewUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsersList.resx">
-      <DependentUpon>UsersList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditingUsers.resx">
-      <DependentUpon>EditingUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,6 +88,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
