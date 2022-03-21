@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.IO.Compression;
+
 namespace WindowsFormsApplication1
 {
     public partial class MainForm : Form
@@ -21,7 +23,8 @@ namespace WindowsFormsApplication1
             {
                 button10.Show();
             }
-            else {
+            else
+            {
                 button10.Hide();
             }
         }
@@ -49,7 +52,7 @@ namespace WindowsFormsApplication1
 
                     if (ah)
                     {
-                        for (int i = 0; i < subs.Length-1; i++)
+                        for (int i = 0; i < subs.Length - 1; i++)
                         {
                             dataGridViewPreparats.Columns.Add(subs[i], subs[i]);
                             //dataGridViewPreparats.Font = new Font("Verbena", 8);
@@ -62,9 +65,10 @@ namespace WindowsFormsApplication1
 
                         ah = false;
 
-                      
+
                     }
-                    else {
+                    else
+                    {
                         dataGridViewPreparats.Rows.Add(subs);
                         DateTime dateTime = Convert.ToDateTime(subs[4]);
                         if (subs[3].Contains("д"))
@@ -112,13 +116,13 @@ namespace WindowsFormsApplication1
                         //    //dataGridSupplierReport.Font = new Font("Verbena", 8);
                         //    //dataGridSupplierReport.Columns[i].Width = 90;
 
-                            
+
                         //}
                         for (int i = 0; i < subs.Length; i++)
                         {
                             dataGridViewOrders.Columns.Add(subs[i], subs[i]);
                             //dataGridViewOrders.Font = new Font("Verbena", 11);
-                           //dataGridViewOrders.Columns[i].Width = 200;
+                            //dataGridViewOrders.Columns[i].Width = 200;
                             comboBox2.Items.Add(subs[i]);
 
 
@@ -136,8 +140,8 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        int countS=0;
-                        for (int j = 0; j < dataGridViewPreparats.Rows.Count-1; j++)
+                        int countS = 0;
+                        for (int j = 0; j < dataGridViewPreparats.Rows.Count - 1; j++)
                         {
                             String nameP = Convert.ToString(dataGridViewPreparats.Rows[j].Cells[0].Value);
                             if (subs[0] == nameP)
@@ -149,7 +153,7 @@ namespace WindowsFormsApplication1
 
                         //dataGridSupplierReport.Rows.Add(supply);
 
-                        string[] supply3 = { subs[2], subs[0], Convert.ToString(countS), subs[1], Convert.ToString(countS-Convert.ToInt32(subs[1])) };
+                        string[] supply3 = { subs[2], subs[0], Convert.ToString(countS), subs[1], Convert.ToString(countS - Convert.ToInt32(subs[1])) };
 
                         dataGridPreparationsBranch.Rows.Add(supply3);
                         dataGridViewOrders.Rows.Add(subs);
@@ -157,7 +161,7 @@ namespace WindowsFormsApplication1
                     }
 
                 }
-             
+
 
             }
             find = new StreamReader("Заказы на склад1.txt", Encoding.GetEncoding(1251));
@@ -216,7 +220,7 @@ namespace WindowsFormsApplication1
                     {
                         row.Selected = true;
                     }
-                    
+
                 }
             }
 
@@ -224,26 +228,88 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string s = Convert.ToString(dataGridViewPreparats[0, 1].Value);
-            searchPreparats.Text = s+";";
-            File.Delete("Медикаменты склада1.txt");
+            //foreach (GridViewRow dr in dataGridViewPreparats.Rows)
+            //{
+            //    if (dr.Cells[4].Text == "&nbsp;")// проверяем 4-й столбец на пустые ячейки
+            //    {
+            //        dr.Cells[4].BackColor = System.Drawing.Color.Yellow; // заодно покрасим
 
+            //    }
+            //}
+            //for (int i = 0; i < dataGridViewPreparats.ColumnCount; i++)
+            //{
+            //    for (int j = 0; j < dataGridViewPreparats.RowCount; j++)
+            //    {
+            //        if (dataGridViewPreparats[i, j].Value = null)
+            //        {
+            //            Cells[4].BackColor = System.Drawing.Color.Yellow;
+            //        }
+            //    }
+            //}
+            string s = Convert.ToString(dataGridViewPreparats[0, 1].Value);
+            searchPreparats.Text = s + ";";
+            File.Delete("Медикаменты склада1.txt");
+            Boolean err = true;
             using (StreamWriter writer = new StreamWriter("Медикаменты склада1.txt", true, Encoding.GetEncoding("windows-1251")))
             //using (StreamWriter writer = File.AppendText("Сотрудники.txt"))
-            {
+            { 
                 try
                 {
-                    for (int j = 0; j < dataGridViewPreparats.Rows.Count-1; j++)
+                   
+                    for (int j = 0; j < dataGridViewPreparats.Rows.Count - 1; j++)
                     {
-                        for (int i = 0; i < dataGridViewPreparats.Rows[j].Cells.Count; i++)
+                        if (err)
                         {
-                            writer.Write(dataGridViewPreparats.Rows[j].Cells[i].Value + ";");
+                            for (int i = 0; i < dataGridViewPreparats.Rows[j].Cells.Count; i++)
+                            {
+                                if (dataGridViewPreparats.Rows[j].Cells[i].Value == null)
+                                {
+                                    //    dataGridViewPreparats.Rows[j].Cells[i].Style = System.Drawing.Color.Yellow;
+                                    MessageBox.Show("Некоторые ячейки пустые");
+                                    err = false;
+                                    break;
+                                }
+                                if (i == 2 || i == 1) {
+                                    try
+                                    {
+                                        Int32 symbol = Convert.ToInt32(dataGridViewPreparats.Rows[j].Cells[i].Value);
+                                    }
+                                    catch {
+                                        MessageBox.Show("В столбцax 'цена' и 'кол-во' значения должны быть в  числовом формате");
+                                        err = false;
+                                        break;
+                                    }
+                                }
+                                if (i == 4)
+                                {
+                                    try
+                                    {
+                                        DateTime symbol = Convert.ToDateTime(dataGridViewPreparats.Rows[j].Cells[i].Value);
+                                    }
+                                    catch
+                                    {
+                                        MessageBox.Show("В столбце 'дата изготовления' значения должны быть в формате даты");
+                                        err = false;
+                                        break;
+                                    }
+                                }
+                                else
+                                {
+                                    writer.Write(dataGridViewPreparats.Rows[j].Cells[i].Value + ";");
+                                }
+                            }
+
+                            writer.WriteLine();
                         }
-
-                        writer.WriteLine();
+                        else { break; }
                     }
-
-                    MessageBox.Show("Файл успешно сохранен");
+                    if (err)
+                    {
+                        MessageBox.Show("Файл успешно сохранен");
+                    }
+                    else {
+                        MessageBox.Show("Проверьте правильность заполнения ячеек");
+                    }
                 }
                 catch
                 {
@@ -251,7 +317,7 @@ namespace WindowsFormsApplication1
                 }
 
 
-            } 
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -310,7 +376,7 @@ namespace WindowsFormsApplication1
                 }
 
 
-            } 
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -337,10 +403,12 @@ namespace WindowsFormsApplication1
                 {
                     var row = dataGridSupplierReport.Rows[i];
                     int z = comboBox3.SelectedIndex;
-                    if (z == 1) {
+                    if (z == 1)
+                    {
                         z = 0;
                     }
-                    else if (z == 0) {
+                    else if (z == 0)
+                    {
                         z = 1;
                     }
                     if (row.Cells[z].Value.ToString().Contains(value))
@@ -352,8 +420,107 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void SaveReports_Click(object sender, EventArgs e)
+        {
+            File.Delete("Отчёты");
+
+            Directory.CreateDirectory("Отчёты");
+            string s = Convert.ToString(dataGridViewOrders[0, 1].Value);
+            searchOrders.Text = s + ";";
+            File.Delete("Отчёт о поставщиках.txt");
+            File.Delete("Отчёт о просрочке.txt");
+
+            File.Delete("Отчёт о достатках_недостатках.txt");
+
+            try
+            {
+                using (StreamWriter writer = new StreamWriter("Отчёты\\Отчёт о поставщиках.txt", true, Encoding.GetEncoding("windows-1251")))
+                //using (StreamWriter writer = File.AppendText("Сотрудники.txt"))
+                {
+                    writer.WriteLine("OOO \"Медицина и Диагностика\". ИНН 5260372828\\526001001, 603005," +
+                                    "Нижегородская обл. Нижний Новгород г. Красная Слобода, дю 9," +
+                                    "кор. литер А, кв 40, р/с 407028108500008236 в Филиал N 6318 ВТБ24 (ЗАО)" +
+                                    "г. Самара, БИК 043602955, кopp/c 30101810700000000955");
+
+                    for (int j = 0; j < dataGridSupplierReport.Rows.Count - 1; j++)
+                    {
+                        for (int i = 0; i < dataGridSupplierReport.Rows[j].Cells.Count; i++)
+                        {
+                            writer.Write(dataGridSupplierReport.Rows[j].Cells[i].Value + ";");
+                        }
+
+                        writer.WriteLine();
+                    }
+
+                    MessageBox.Show("Файл 'Отчёт о поставщиках' успешно сохранен");
+                }
+                using (StreamWriter writer = new StreamWriter("Отчёты\\Отчёт о просрочке.txt", true, Encoding.GetEncoding("windows-1251")))
+                //using (StreamWriter writer = File.AppendText("Сотрудники.txt"))
+                {
+                    writer.WriteLine("OOO \"Медицина и Диагностика\". ИНН 5260372828\\526001001, 603005," +
+                                    "Нижегородская обл. Нижний Новгород г. Красная Слобода, дю 9," +
+                                    "кор. литер А, кв 40, р/с 407028108500008236 в Филиал N 6318 ВТБ24 (ЗАО)" +
+                                    "г. Самара, БИК 043602955, кopp/c 30101810700000000955");
+
+                    for (int j = 0; j < dataGridDelay.Rows.Count - 1; j++)
+                    {
+                        for (int i = 0; i < dataGridDelay.Rows[j].Cells.Count; i++)
+                        {
+                            writer.Write(dataGridDelay.Rows[j].Cells[i].Value + ";");
+                        }
+
+                        writer.WriteLine();
+                    }
+
+                    MessageBox.Show("Файл 'Отчёт о просрочке' успешно сохранен");
+                }
+                using (StreamWriter writer = new StreamWriter("Отчёты\\Отчёт о достатках_недостатках.txt", true, Encoding.GetEncoding("windows-1251")))
+                //using (StreamWriter writer = File.AppendText("Сотрудники.txt"))
+                {
+                    writer.WriteLine("OOO \"Медицина и Диагностика\". ИНН 5260372828\\526001001, 603005," +
+                                    "Нижегородская обл. Нижний Новгород г. Красная Слобода, дю 9," +
+                                    "кор. литер А, кв 40, р/с 407028108500008236 в Филиал N 6318 ВТБ24 (ЗАО)" +
+                                    "г. Самара, БИК 043602955, кopp/c 30101810700000000955");
+
+                    for (int j = 0; j < dataGridPreparationsBranch.Rows.Count - 1; j++)
+                    {
+                        for (int i = 0; i < dataGridPreparationsBranch.Rows[j].Cells.Count; i++)
+                        {
+                            writer.Write(dataGridPreparationsBranch.Rows[j].Cells[i].Value + ";");
+                        }
+
+                        writer.WriteLine();
+                    }
+
+                    MessageBox.Show("Файл 'Отчёт о достатках_недостатках' успешно сохранен");
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при сохранении файла!");
+            }
 
 
-       
+
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                File.Delete("Отчёты.zip");
+                ZipFile.CreateFromDirectory("Отчёты", "Отчёты.zip");
+                MessageBox.Show("Файлы успешно архивированы!");
+
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при архивировании файла!");
+            }
+        }
+     
+
     }
 }

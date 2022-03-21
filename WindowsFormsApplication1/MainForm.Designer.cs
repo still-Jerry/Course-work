@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -54,6 +54,9 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.findSupplierReport = new System.Windows.Forms.Button();
+            this.searchSupplierReport = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.dataGridSupplierReport = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +65,9 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.findPreparationsBranch = new System.Windows.Forms.Button();
+            this.searchPreparationsBranch = new System.Windows.Forms.TextBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.dataGridPreparationsBranch = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +76,9 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.findDelay = new System.Windows.Forms.Button();
+            this.searchDelay = new System.Windows.Forms.TextBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.dataGridDelay = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,15 +87,8 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button10 = new System.Windows.Forms.Button();
-            this.findSupplierReport = new System.Windows.Forms.Button();
-            this.searchSupplierReport = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.findPreparationsBranch = new System.Windows.Forms.Button();
-            this.searchPreparationsBranch = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.findDelay = new System.Windows.Forms.Button();
-            this.searchDelay = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.SaveReports = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPreparats)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -166,8 +168,8 @@
             // 
             // dataGridViewPreparats
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridViewPreparats.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridViewPreparats.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewPreparats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -263,8 +265,8 @@
             // 
             // dataGridViewOrders
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridViewOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridViewOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -356,6 +358,38 @@
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Поставщики";
             // 
+            // findSupplierReport
+            // 
+            this.findSupplierReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.findSupplierReport.Location = new System.Drawing.Point(547, 6);
+            this.findSupplierReport.Name = "findSupplierReport";
+            this.findSupplierReport.Size = new System.Drawing.Size(104, 27);
+            this.findSupplierReport.TabIndex = 14;
+            this.findSupplierReport.Text = "Поиск";
+            this.findSupplierReport.UseVisualStyleBackColor = true;
+            this.findSupplierReport.Click += new System.EventHandler(this.findSupplierReport_Click);
+            // 
+            // searchSupplierReport
+            // 
+            this.searchSupplierReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchSupplierReport.Location = new System.Drawing.Point(6, 6);
+            this.searchSupplierReport.Name = "searchSupplierReport";
+            this.searchSupplierReport.Size = new System.Drawing.Size(389, 26);
+            this.searchSupplierReport.TabIndex = 13;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(414, 6);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(118, 26);
+            this.comboBox3.TabIndex = 12;
+            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
@@ -372,8 +406,8 @@
             // 
             // dataGridSupplierReport
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridSupplierReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridSupplierReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridSupplierReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -387,7 +421,7 @@
             this.Column8});
             this.dataGridSupplierReport.Location = new System.Drawing.Point(2, 121);
             this.dataGridSupplierReport.Name = "dataGridSupplierReport";
-            this.dataGridSupplierReport.Size = new System.Drawing.Size(649, 223);
+            this.dataGridSupplierReport.Size = new System.Drawing.Size(649, 228);
             this.dataGridSupplierReport.TabIndex = 9;
             // 
             // Column2
@@ -430,6 +464,37 @@
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Отстатки/недостатки";
             // 
+            // findPreparationsBranch
+            // 
+            this.findPreparationsBranch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.findPreparationsBranch.Location = new System.Drawing.Point(549, 7);
+            this.findPreparationsBranch.Name = "findPreparationsBranch";
+            this.findPreparationsBranch.Size = new System.Drawing.Size(104, 27);
+            this.findPreparationsBranch.TabIndex = 17;
+            this.findPreparationsBranch.Text = "Поиск";
+            this.findPreparationsBranch.UseVisualStyleBackColor = true;
+            // 
+            // searchPreparationsBranch
+            // 
+            this.searchPreparationsBranch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchPreparationsBranch.Location = new System.Drawing.Point(8, 7);
+            this.searchPreparationsBranch.Name = "searchPreparationsBranch";
+            this.searchPreparationsBranch.Size = new System.Drawing.Size(389, 26);
+            this.searchPreparationsBranch.TabIndex = 16;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(416, 7);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(118, 26);
+            this.comboBox4.TabIndex = 15;
+            // 
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
@@ -446,8 +511,8 @@
             // 
             // dataGridPreparationsBranch
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridPreparationsBranch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridPreparationsBranch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridPreparationsBranch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -461,7 +526,7 @@
             this.dataGridViewTextBoxColumn5});
             this.dataGridPreparationsBranch.Location = new System.Drawing.Point(4, 121);
             this.dataGridPreparationsBranch.Name = "dataGridPreparationsBranch";
-            this.dataGridPreparationsBranch.Size = new System.Drawing.Size(649, 223);
+            this.dataGridPreparationsBranch.Size = new System.Drawing.Size(649, 228);
             this.dataGridPreparationsBranch.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
@@ -492,6 +557,8 @@
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.Color.LemonChiffon;
+            this.tabPage7.Controls.Add(this.button2);
+            this.tabPage7.Controls.Add(this.SaveReports);
             this.tabPage7.Controls.Add(this.findDelay);
             this.tabPage7.Controls.Add(this.searchDelay);
             this.tabPage7.Controls.Add(this.comboBox5);
@@ -503,6 +570,37 @@
             this.tabPage7.Size = new System.Drawing.Size(657, 320);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Просрочка";
+            // 
+            // findDelay
+            // 
+            this.findDelay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.findDelay.Location = new System.Drawing.Point(549, 6);
+            this.findDelay.Name = "findDelay";
+            this.findDelay.Size = new System.Drawing.Size(104, 27);
+            this.findDelay.TabIndex = 19;
+            this.findDelay.Text = "Поиск";
+            this.findDelay.UseVisualStyleBackColor = true;
+            // 
+            // searchDelay
+            // 
+            this.searchDelay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchDelay.Location = new System.Drawing.Point(8, 6);
+            this.searchDelay.Name = "searchDelay";
+            this.searchDelay.Size = new System.Drawing.Size(389, 26);
+            this.searchDelay.TabIndex = 18;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(416, 6);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(118, 26);
+            this.comboBox5.TabIndex = 17;
             // 
             // listBox4
             // 
@@ -520,8 +618,8 @@
             // 
             // dataGridDelay
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridDelay.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridDelay.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridDelay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -535,7 +633,7 @@
             this.dataGridViewTextBoxColumn11});
             this.dataGridDelay.Location = new System.Drawing.Point(4, 121);
             this.dataGridDelay.Name = "dataGridDelay";
-            this.dataGridDelay.Size = new System.Drawing.Size(649, 223);
+            this.dataGridDelay.Size = new System.Drawing.Size(649, 161);
             this.dataGridDelay.TabIndex = 15;
             // 
             // dataGridViewTextBoxColumn7
@@ -574,99 +672,25 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // findSupplierReport
+            // SaveReports
             // 
-            this.findSupplierReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.findSupplierReport.Location = new System.Drawing.Point(547, 6);
-            this.findSupplierReport.Name = "findSupplierReport";
-            this.findSupplierReport.Size = new System.Drawing.Size(104, 27);
-            this.findSupplierReport.TabIndex = 14;
-            this.findSupplierReport.Text = "Поиск";
-            this.findSupplierReport.UseVisualStyleBackColor = true;
-            this.findSupplierReport.Click += new System.EventHandler(this.findSupplierReport_Click);
+            this.SaveReports.Location = new System.Drawing.Point(492, 288);
+            this.SaveReports.Name = "SaveReports";
+            this.SaveReports.Size = new System.Drawing.Size(159, 26);
+            this.SaveReports.TabIndex = 11;
+            this.SaveReports.Text = "Сохранить отчёты";
+            this.SaveReports.UseVisualStyleBackColor = true;
+            this.SaveReports.Click += new System.EventHandler(this.SaveReports_Click);
             // 
-            // searchSupplierReport
+            // button2
             // 
-            this.searchSupplierReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchSupplierReport.Location = new System.Drawing.Point(6, 6);
-            this.searchSupplierReport.Name = "searchSupplierReport";
-            this.searchSupplierReport.Size = new System.Drawing.Size(389, 26);
-            this.searchSupplierReport.TabIndex = 13;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(414, 6);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(118, 26);
-            this.comboBox3.TabIndex = 12;
-            // 
-            // findPreparationsBranch
-            // 
-            this.findPreparationsBranch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.findPreparationsBranch.Location = new System.Drawing.Point(549, 7);
-            this.findPreparationsBranch.Name = "findPreparationsBranch";
-            this.findPreparationsBranch.Size = new System.Drawing.Size(104, 27);
-            this.findPreparationsBranch.TabIndex = 17;
-            this.findPreparationsBranch.Text = "Поиск";
-            this.findPreparationsBranch.UseVisualStyleBackColor = true;
-            // 
-            // searchPreparationsBranch
-            // 
-            this.searchPreparationsBranch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchPreparationsBranch.Location = new System.Drawing.Point(8, 7);
-            this.searchPreparationsBranch.Name = "searchPreparationsBranch";
-            this.searchPreparationsBranch.Size = new System.Drawing.Size(389, 26);
-            this.searchPreparationsBranch.TabIndex = 16;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(416, 7);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(118, 26);
-            this.comboBox4.TabIndex = 15;
-            // 
-            // findDelay
-            // 
-            this.findDelay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.findDelay.Location = new System.Drawing.Point(549, 6);
-            this.findDelay.Name = "findDelay";
-            this.findDelay.Size = new System.Drawing.Size(104, 27);
-            this.findDelay.TabIndex = 19;
-            this.findDelay.Text = "Поиск";
-            this.findDelay.UseVisualStyleBackColor = true;
-            // 
-            // searchDelay
-            // 
-            this.searchDelay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchDelay.Location = new System.Drawing.Point(8, 6);
-            this.searchDelay.Name = "searchDelay";
-            this.searchDelay.Size = new System.Drawing.Size(389, 26);
-            this.searchDelay.TabIndex = 18;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(416, 6);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(118, 26);
-            this.comboBox5.TabIndex = 17;
+            this.button2.Location = new System.Drawing.Point(6, 291);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 26);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Копировать отчёты";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // MainForm
             // 
@@ -763,6 +787,8 @@
         private System.Windows.Forms.Button findDelay;
         private System.Windows.Forms.TextBox searchDelay;
         private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Button SaveReports;
+        private System.Windows.Forms.Button button2;
     }
 }
 
