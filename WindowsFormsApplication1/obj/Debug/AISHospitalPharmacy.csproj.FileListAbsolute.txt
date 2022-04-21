@@ -1,0 +1,12 @@
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.csproj.GenerateResource.Cache
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.ConsignmentNote.resources
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.MainForm.resources
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.Form2.resources
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.Properties.Resources.resources
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.Users.resources
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\bin\Debug\AISHospitalPharmacy.exe.config
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\bin\Debug\AISHospitalPharmacy.exe
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\bin\Debug\AISHospitalPharmacy.pdb
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.exe
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.pdb
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.csprojResolveAssemblyReference.cache

@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace AISHospitalPharmacy
 {
     partial class Users
     {
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
             this.CopyWorkers = new System.Windows.Forms.Button();
             this.FindWorkers = new System.Windows.Forms.Button();
             this.dataGridViewWorkers = new System.Windows.Forms.DataGridView();
@@ -130,6 +131,7 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.SaveWorkers);
             this.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

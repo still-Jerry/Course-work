@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace AISHospitalPharmacy
 {
     partial class MainForm
     {
@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -76,6 +77,8 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.SaveReports = new System.Windows.Forms.Button();
             this.findDelay = new System.Windows.Forms.Button();
             this.searchDelay = new System.Windows.Forms.TextBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
@@ -87,8 +90,6 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button10 = new System.Windows.Forms.Button();
-            this.SaveReports = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPreparats)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -168,8 +169,8 @@
             // 
             // dataGridViewPreparats
             // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridViewPreparats.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridViewPreparats.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewPreparats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -265,8 +266,8 @@
             // 
             // dataGridViewOrders
             // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridViewOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridViewOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -406,8 +407,8 @@
             // 
             // dataGridSupplierReport
             // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridSupplierReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridSupplierReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridSupplierReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -421,7 +422,7 @@
             this.Column8});
             this.dataGridSupplierReport.Location = new System.Drawing.Point(2, 121);
             this.dataGridSupplierReport.Name = "dataGridSupplierReport";
-            this.dataGridSupplierReport.Size = new System.Drawing.Size(649, 228);
+            this.dataGridSupplierReport.Size = new System.Drawing.Size(649, 238);
             this.dataGridSupplierReport.TabIndex = 9;
             // 
             // Column2
@@ -511,8 +512,8 @@
             // 
             // dataGridPreparationsBranch
             // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridPreparationsBranch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridPreparationsBranch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridPreparationsBranch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -526,7 +527,7 @@
             this.dataGridViewTextBoxColumn5});
             this.dataGridPreparationsBranch.Location = new System.Drawing.Point(4, 121);
             this.dataGridPreparationsBranch.Name = "dataGridPreparationsBranch";
-            this.dataGridPreparationsBranch.Size = new System.Drawing.Size(649, 228);
+            this.dataGridPreparationsBranch.Size = new System.Drawing.Size(649, 238);
             this.dataGridPreparationsBranch.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
@@ -570,6 +571,26 @@
             this.tabPage7.Size = new System.Drawing.Size(657, 320);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Просрочка";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 291);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 26);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Копировать отчёты";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // SaveReports
+            // 
+            this.SaveReports.Location = new System.Drawing.Point(492, 288);
+            this.SaveReports.Name = "SaveReports";
+            this.SaveReports.Size = new System.Drawing.Size(159, 26);
+            this.SaveReports.TabIndex = 11;
+            this.SaveReports.Text = "Сохранить отчёты";
+            this.SaveReports.UseVisualStyleBackColor = true;
+            this.SaveReports.Click += new System.EventHandler(this.SaveReports_Click);
             // 
             // findDelay
             // 
@@ -618,8 +639,8 @@
             // 
             // dataGridDelay
             // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridDelay.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridDelay.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridDelay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -633,7 +654,7 @@
             this.dataGridViewTextBoxColumn11});
             this.dataGridDelay.Location = new System.Drawing.Point(4, 121);
             this.dataGridDelay.Name = "dataGridDelay";
-            this.dataGridDelay.Size = new System.Drawing.Size(649, 161);
+            this.dataGridDelay.Size = new System.Drawing.Size(649, 164);
             this.dataGridDelay.TabIndex = 15;
             // 
             // dataGridViewTextBoxColumn7
@@ -672,26 +693,6 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // SaveReports
-            // 
-            this.SaveReports.Location = new System.Drawing.Point(492, 288);
-            this.SaveReports.Name = "SaveReports";
-            this.SaveReports.Size = new System.Drawing.Size(159, 26);
-            this.SaveReports.TabIndex = 11;
-            this.SaveReports.Text = "Сохранить отчёты";
-            this.SaveReports.UseVisualStyleBackColor = true;
-            this.SaveReports.Click += new System.EventHandler(this.SaveReports_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(6, 291);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 26);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Копировать отчёты";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -703,6 +704,7 @@
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

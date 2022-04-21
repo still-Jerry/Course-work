@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.IO.Compression;
 
-namespace WindowsFormsApplication1
+namespace AISHospitalPharmacy
 {
     public partial class MainForm : Form
     {
@@ -434,7 +434,8 @@ namespace WindowsFormsApplication1
 
             try
             {
-                using (StreamWriter writer = new StreamWriter("Отчёты\\Отчёт о поставщиках.txt", true, Encoding.GetEncoding("windows-1251")))
+                String path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);//путь к Документам
+                using (StreamWriter writer = new StreamWriter(path+"Отчёты\\Отчёт о поставщиках.txt", true, Encoding.GetEncoding("windows-1251")))
                 //using (StreamWriter writer = File.AppendText("Сотрудники.txt"))
                 {
                     writer.WriteLine("OOO \"Медицина и Диагностика\". ИНН 5260372828\\526001001, 603005," +

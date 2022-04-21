@@ -13,7 +13,7 @@ using System.IO;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace WindowsFormsApplication1
+namespace AISHospitalPharmacy
 {
     public partial class Form2 : Form
     {

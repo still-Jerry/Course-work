@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace AISHospitalPharmacy
 {
     partial class Form2
     {
