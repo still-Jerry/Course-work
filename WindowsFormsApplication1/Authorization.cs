@@ -27,44 +27,46 @@ namespace AISHospitalPharmacy
 
         public void button2_Click(object sender, EventArgs e)
         {
-           var find = new StreamReader("Сотрудники.txt", Encoding.GetEncoding(1251));
-            //using (StreamReader find = File.OpenText("Сотрудники.txt"))
-            using (find)
+            //если поля пустые ничего не делаем
+            if (textBox1.Text != String.Empty || textBox2.Text != String.Empty)
             {
-                String input = null;
-                String[] subsw = null;
-                int fl = 0;
-
-                while ((input = find.ReadLine()) != null)
+                //Находим соответсвующие логин и парль в бд пользователей  
+                //открываем файл, читаем построчной, делим строку по символу ищем совпадения в определённых колонках
+                var find = new StreamReader("Сотрудники.txt", Encoding.GetEncoding(1251));
+                using (find)
                 {
-                    subsw = input.Split(';');
-                    String PasswordFile = subsw[8];
-                    String LoginFile = subsw[7];
-                    //if (subsw[6] == textBox1.Text && subsw[7] == textBox2.Text)
-                    if (LoginFile.IndexOf(textBox1.Text) > -1 && PasswordFile.IndexOf(textBox2.Text) > -1)
+                    String input = null;
+                    String[] subsw = null;
+                    int fl = 0;
+                    while ((input = find.ReadLine()) != null)
                     {
-                        fl = 1;
-                        UserName = subsw[0];
-                        usr = subsw[9];
-                        
-                        break;
-                    }
-                    
-                }
-                if (fl == 1)
-                {
-                    fl = 0;
-                    MainForm f = new MainForm();
-                    f.Show();
-                    this.Hide();
-                }
-                else {
-                    MessageBox.Show("Неверен логин или пароль");
+                        subsw = input.Split(';');
+                        String PasswordFile = subsw[8];
+                        String LoginFile = subsw[7];
+                        if (LoginFile.IndexOf(textBox1.Text) > -1 && PasswordFile.IndexOf(textBox2.Text) > -1)
+                        {
+                            fl = 1;
+                            UserName = subsw[0];
+                            usr = subsw[9];
+                            break;
+                        }
 
+                    }
+                    if (fl == 1)
+                    {
+                        fl = 0;
+                        MainForm f = new MainForm();
+                        f.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неверен логин или пароль");
+
+                    }
                 }
             }
+            //else { MessageBox.Show("Поля пусты"); }
         }
-
-     
     }
 }

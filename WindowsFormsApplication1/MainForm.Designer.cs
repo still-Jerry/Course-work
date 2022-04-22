@@ -155,6 +155,7 @@
             this.CopyPreparats.TabIndex = 12;
             this.CopyPreparats.Text = "Копировать базу";
             this.CopyPreparats.UseVisualStyleBackColor = true;
+            this.CopyPreparats.Click += new System.EventHandler(this.CopyPreparats_Click);
             // 
             // FindPreparats
             // 
@@ -252,6 +253,7 @@
             this.CopyOrders.TabIndex = 18;
             this.CopyOrders.Text = "Копировать базу";
             this.CopyOrders.UseVisualStyleBackColor = true;
+            this.CopyOrders.Click += new System.EventHandler(this.CopyOrders_Click);
             // 
             // FindOrders
             // 
@@ -422,7 +424,7 @@
             this.Column8});
             this.dataGridSupplierReport.Location = new System.Drawing.Point(2, 121);
             this.dataGridSupplierReport.Name = "dataGridSupplierReport";
-            this.dataGridSupplierReport.Size = new System.Drawing.Size(649, 238);
+            this.dataGridSupplierReport.Size = new System.Drawing.Size(649, 243);
             this.dataGridSupplierReport.TabIndex = 9;
             // 
             // Column2
@@ -527,7 +529,7 @@
             this.dataGridViewTextBoxColumn5});
             this.dataGridPreparationsBranch.Location = new System.Drawing.Point(4, 121);
             this.dataGridPreparationsBranch.Name = "dataGridPreparationsBranch";
-            this.dataGridPreparationsBranch.Size = new System.Drawing.Size(649, 238);
+            this.dataGridPreparationsBranch.Size = new System.Drawing.Size(649, 243);
             this.dataGridPreparationsBranch.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
@@ -654,7 +656,7 @@
             this.dataGridViewTextBoxColumn11});
             this.dataGridDelay.Location = new System.Drawing.Point(4, 121);
             this.dataGridDelay.Name = "dataGridDelay";
-            this.dataGridDelay.Size = new System.Drawing.Size(649, 164);
+            this.dataGridDelay.Size = new System.Drawing.Size(649, 169);
             this.dataGridDelay.TabIndex = 15;
             // 
             // dataGridViewTextBoxColumn7
