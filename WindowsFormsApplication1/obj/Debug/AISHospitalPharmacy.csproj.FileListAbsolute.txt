@@ -9,4 +9,5 @@ C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая раб
 C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\bin\Debug\AISHospitalPharmacy.pdb
 C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.exe
 C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.pdb
+C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.Verification.resources
 C:\Users\Командор\Desktop\Сайт_ы\Курс 3\Курсовая работа\new\WindowsFormsApplication1\obj\Debug\AISHospitalPharmacy.csprojResolveAssemblyReference.cache

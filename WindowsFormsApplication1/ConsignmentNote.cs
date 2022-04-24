@@ -32,8 +32,15 @@ namespace AISHospitalPharmacy
             Double Sum = 0;
             for (int j = 0; j < dataGridConsignmentNote.Rows.Count - 1; j++)
             {
-                dataGridConsignmentNote.Rows[j].Cells[dataGridConsignmentNote.Rows[j].Cells.Count - 1].Value = Convert.ToInt32(dataGridConsignmentNote.Rows[j].Cells[2].Value) * Convert.ToDouble(dataGridConsignmentNote.Rows[j].Cells[3].Value);
-                Sum += Convert.ToDouble(dataGridConsignmentNote.Rows[j].Cells[dataGridConsignmentNote.Rows[j].Cells.Count - 1].Value);
+                try
+                {
+                    dataGridConsignmentNote.Rows[j].Cells[dataGridConsignmentNote.Rows[j].Cells.Count - 1].Value = Convert.ToInt32(dataGridConsignmentNote.Rows[j].Cells[2].Value) * Convert.ToDouble(dataGridConsignmentNote.Rows[j].Cells[3].Value);
+                    Sum += Convert.ToDouble(dataGridConsignmentNote.Rows[j].Cells[dataGridConsignmentNote.Rows[j].Cells.Count - 1].Value);
+                }
+                catch {
+                    MessageBox.Show("В столбцax 'цена закупочная', 'цена общая' и 'кол-во' значения должны быть в числовом формате");
+                
+                }
             }
             label3.Text = Convert.ToString(Sum) + " p.";
         }
@@ -64,7 +71,7 @@ namespace AISHospitalPharmacy
                         }
                         catch
                         {
-                            MessageBox.Show("В столбцax 'цена закупочная', 'цена общая' b 'кол-во' значения должны быть в числовом формате");
+                            MessageBox.Show("В столбцax 'цена закупочная', 'цена общая' и 'кол-во' значения должны быть в числовом формате");
                             err = false;
                             break;
                         }
@@ -247,6 +254,45 @@ namespace AISHospitalPharmacy
                 {
                     MessageBox.Show("Ошибка сохранения Word документа\n" + y.ToString());
 
+                }
+                try
+                {
+                    Boolean tr = true;
+                    using (StreamWriter writer = new StreamWriter("Заказы на склад.txt", true, Encoding.GetEncoding("windows-1251")))
+                    {
+                        for (int j = 0; j < dataGridConsignmentNote.Rows.Count; j++)
+                        {
+                            for (int i = 0; i < dataGridConsignmentNote.Rows[j].Cells.Count; i++)
+                            {
+                                if (j == 0)
+                                {
+                                    //if (tr)
+                                    //{
+                                    //    tr = false;
+                                    //    writer.Write("\n");
+                                    //}
+                                }
+                                else if (i == dataGridConsignmentNote.Rows[j].Cells.Count - 1)
+                                {
+                                    writer.Write(dataGridConsignmentNote.Rows[j - 1].Cells[i].Value);
+                                }
+                                else
+                                {
+                                    writer.Write(dataGridConsignmentNote.Rows[j - 1].Cells[i].Value + ";");
+                                }
+                            }
+                            if (j != 0)
+                            {
+                                writer.WriteLine();
+                            }
+                        }
+                        MessageBox.Show("Файл \"Заказ на склад.txt\" успешно обновлён.");
+                    }
+                }
+                catch (Exception y)
+                {
+                    MessageBox.Show("Ошибка обновления файла \"Заказ на склад.txt\"\n" + y.ToString());
+                
                 }
             }
         }

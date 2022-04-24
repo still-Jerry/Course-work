@@ -18,6 +18,8 @@ namespace AISHospitalPharmacy
     public partial class Form2 : Form
     {
         public static String usr = null;
+        public static String uLogin = null;
+        public static String uPassword = null;
         public static String UserName = null;
         public Form2()
         {
@@ -48,6 +50,8 @@ namespace AISHospitalPharmacy
                             fl = 1;
                             UserName = subsw[0];
                             usr = subsw[9];
+                            uLogin=subsw[7];
+                            uPassword = subsw[8];
                             break;
                         }
 
@@ -68,5 +72,32 @@ namespace AISHospitalPharmacy
             }
             //else { MessageBox.Show("Поля пусты"); }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

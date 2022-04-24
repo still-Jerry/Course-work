@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
             this.CopyWorkers = new System.Windows.Forms.Button();
             this.FindWorkers = new System.Windows.Forms.Button();
@@ -43,19 +44,20 @@
             // CopyWorkers
             // 
             this.CopyWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CopyWorkers.Location = new System.Drawing.Point(16, 390);
+            this.CopyWorkers.Location = new System.Drawing.Point(7, 315);
             this.CopyWorkers.Name = "CopyWorkers";
-            this.CopyWorkers.Size = new System.Drawing.Size(218, 47);
+            this.CopyWorkers.Size = new System.Drawing.Size(194, 42);
             this.CopyWorkers.TabIndex = 44;
             this.CopyWorkers.Text = "Копировать базу";
             this.CopyWorkers.UseVisualStyleBackColor = true;
+            this.CopyWorkers.Click += new System.EventHandler(this.CopyWorkers_Click);
             // 
             // FindWorkers
             // 
             this.FindWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FindWorkers.Location = new System.Drawing.Point(629, 44);
+            this.FindWorkers.Location = new System.Drawing.Point(530, 9);
             this.FindWorkers.Name = "FindWorkers";
-            this.FindWorkers.Size = new System.Drawing.Size(132, 30);
+            this.FindWorkers.Size = new System.Drawing.Size(117, 27);
             this.FindWorkers.TabIndex = 43;
             this.FindWorkers.Text = "Поиск";
             this.FindWorkers.UseVisualStyleBackColor = true;
@@ -63,23 +65,25 @@
             // 
             // dataGridViewWorkers
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dataGridViewWorkers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewWorkers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewWorkers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewWorkers.Location = new System.Drawing.Point(17, 80);
+            this.dataGridViewWorkers.Location = new System.Drawing.Point(7, 42);
             this.dataGridViewWorkers.Name = "dataGridViewWorkers";
-            this.dataGridViewWorkers.Size = new System.Drawing.Size(744, 304);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridViewWorkers.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewWorkers.Size = new System.Drawing.Size(670, 270);
             this.dataGridViewWorkers.TabIndex = 42;
             // 
             // searchWorkers
             // 
-            this.searchWorkers.Location = new System.Drawing.Point(16, 43);
+            this.searchWorkers.Location = new System.Drawing.Point(7, 9);
             this.searchWorkers.Name = "searchWorkers";
-            this.searchWorkers.Size = new System.Drawing.Size(452, 26);
+            this.searchWorkers.Size = new System.Drawing.Size(385, 26);
             this.searchWorkers.TabIndex = 41;
             // 
             // comboBox2
@@ -88,17 +92,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(475, 43);
+            this.comboBox2.Location = new System.Drawing.Point(395, 9);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(147, 26);
+            this.comboBox2.Size = new System.Drawing.Size(131, 26);
             this.comboBox2.TabIndex = 40;
             // 
             // SaveWorkers
             // 
             this.SaveWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveWorkers.Location = new System.Drawing.Point(542, 390);
+            this.SaveWorkers.Location = new System.Drawing.Point(484, 315);
             this.SaveWorkers.Name = "SaveWorkers";
-            this.SaveWorkers.Size = new System.Drawing.Size(218, 47);
+            this.SaveWorkers.Size = new System.Drawing.Size(194, 42);
             this.SaveWorkers.TabIndex = 39;
             this.SaveWorkers.Text = "Сохранить изменения";
             this.SaveWorkers.UseVisualStyleBackColor = true;
@@ -108,12 +112,12 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(629, 4);
+            this.button1.Location = new System.Drawing.Point(650, 9);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 32);
+            this.button1.Size = new System.Drawing.Size(28, 27);
             this.button1.TabIndex = 45;
-            this.button1.Text = "Вернуться";
+            this.button1.Text = "<-";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -122,7 +126,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
-            this.ClientSize = new System.Drawing.Size(777, 446);
+            this.ClientSize = new System.Drawing.Size(684, 361);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.CopyWorkers);
             this.Controls.Add(this.FindWorkers);
