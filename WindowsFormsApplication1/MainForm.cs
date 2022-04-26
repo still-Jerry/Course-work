@@ -14,6 +14,12 @@ namespace AISHospitalPharmacy
 {
     public partial class MainForm : Form
     {
+        public static Boolean chSavePrepavets = false;
+        public static Boolean chSaveOrders = false;
+        public static Boolean chSaveSup = false;
+        public static Boolean chSaveBranch = false;
+        public static Boolean chSaveDelay = false;
+
         public String path_PreparationsBranch = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
         public String path_PreparationsBranchArchive = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
         public String path_SupplierReport = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
@@ -46,7 +52,7 @@ namespace AISHospitalPharmacy
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
             var find = new StreamReader("Медикаменты склада.txt", Encoding.GetEncoding(1251));
             //using (StreamReader find = File.OpenText("Сотрудники.txt"))
             using (find)
@@ -227,6 +233,8 @@ namespace AISHospitalPharmacy
 
         private void button2_Click(object sender, EventArgs e)
         {
+            chSavePrepavets = true;
+            CopyPreparats.Enabled = true;
             //переменная разрешающая перезаписывать файл только при отсуствии некорректностей
             Boolean err = true;
             for (int j = 0; j < dataGridViewPreparats.Rows.Count - 1; j++)
@@ -598,6 +606,8 @@ namespace AISHospitalPharmacy
 
         private void SaveOrders_Click(object sender, EventArgs e)
         {
+            chSaveOrders = true;
+            CopyOrders.Enabled = true;
             //переменная разрешающая перезаписывать файл только при отсуствии некорректностей
             Boolean err = true;
             for (int j = 0; j < dataGridViewOrders.Rows.Count - 1; j++)
@@ -721,8 +731,9 @@ namespace AISHospitalPharmacy
         }
 
         private void SaveReports_Click(object sender, EventArgs e)
-        {          
-            
+        {
+            chSaveDelay = true;
+            button2.Enabled = true;
             if (checkBox3.Checked == true)
             {
                 var res = MessageBox.Show(path_Delay + "\nИзменить путь?", "Внимание", MessageBoxButtons.YesNo);
@@ -827,6 +838,7 @@ namespace AISHospitalPharmacy
 
         private void CopyOrders_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 var path=Environment.GetFolderPath(Environment.SpecialFolder.Personal);
@@ -912,7 +924,6 @@ namespace AISHospitalPharmacy
                     {
                         string[] supply = { subs[1], subs[0], subs[2], subs[3], subs[4] };
                         dataGridSupplierReport.Rows.Add(supply);
-                        dataGridSupplierReport.Rows.Add(subs);
                     }
 
                 }
@@ -923,7 +934,8 @@ namespace AISHospitalPharmacy
 
         private void findPreparationsBranch_Click(object sender, EventArgs e)
         {
-            
+            chSaveBranch = true;
+            button3.Enabled = true;
             
             if (checkBox1.Checked == true)
             {
@@ -1025,7 +1037,8 @@ namespace AISHospitalPharmacy
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            chSaveSup = true;
+            button4.Enabled = true;
             
             if (checkBox2.Checked == true)
             {
@@ -1222,6 +1235,54 @@ namespace AISHospitalPharmacy
 
                 }
 
+            }
+
+        }
+
+      
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            if (chSavePrepavets)
+            {
+                CopyPreparats.Enabled = true;
+            }
+            else
+            {
+                CopyPreparats.Enabled = false;
+            }
+
+            if (chSaveOrders)
+            {
+                CopyOrders.Enabled = true;
+            }
+            else
+            {
+                CopyOrders.Enabled = false;
+            }
+            if (chSaveDelay)
+            {
+                button2.Enabled = true;
+            }
+            else
+            {
+                button2.Enabled = false;
+            }
+            if (chSaveSup)
+            {
+                button4.Enabled = true;
+            }
+            else
+            {
+                button4.Enabled = false;
+            }
+            if (chSaveBranch)
+            {
+                button3.Enabled = true;
+            }
+            else
+            {
+                button3.Enabled = false;
             }
 
         }

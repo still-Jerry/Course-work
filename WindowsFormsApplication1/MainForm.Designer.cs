@@ -122,7 +122,7 @@
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(478, 7);
+            this.dateTimePicker1.Location = new System.Drawing.Point(489, 6);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 2;
@@ -140,14 +140,14 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(676, 369);
+            this.tabPage1.Size = new System.Drawing.Size(685, 373);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Медикаменты на складе";
             // 
             // CopyPreparats
             // 
             this.CopyPreparats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CopyPreparats.Location = new System.Drawing.Point(7, 318);
+            this.CopyPreparats.Location = new System.Drawing.Point(7, 322);
             this.CopyPreparats.Name = "CopyPreparats";
             this.CopyPreparats.Size = new System.Drawing.Size(194, 42);
             this.CopyPreparats.TabIndex = 12;
@@ -158,7 +158,7 @@
             // FindPreparats
             // 
             this.FindPreparats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FindPreparats.Location = new System.Drawing.Point(552, 9);
+            this.FindPreparats.Location = new System.Drawing.Point(561, 9);
             this.FindPreparats.Name = "FindPreparats";
             this.FindPreparats.Size = new System.Drawing.Size(117, 27);
             this.FindPreparats.TabIndex = 11;
@@ -177,7 +177,7 @@
             this.dataGridViewPreparats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPreparats.Location = new System.Drawing.Point(7, 42);
             this.dataGridViewPreparats.Name = "dataGridViewPreparats";
-            this.dataGridViewPreparats.Size = new System.Drawing.Size(661, 270);
+            this.dataGridViewPreparats.Size = new System.Drawing.Size(670, 274);
             this.dataGridViewPreparats.TabIndex = 8;
             // 
             // searchPreparats
@@ -195,13 +195,13 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(415, 9);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 26);
+            this.comboBox1.Size = new System.Drawing.Size(140, 26);
             this.comboBox1.TabIndex = 4;
             // 
             // SavePreparats
             // 
             this.SavePreparats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SavePreparats.Location = new System.Drawing.Point(475, 318);
+            this.SavePreparats.Location = new System.Drawing.Point(484, 322);
             this.SavePreparats.Name = "SavePreparats";
             this.SavePreparats.Size = new System.Drawing.Size(194, 42);
             this.SavePreparats.TabIndex = 1;
@@ -223,7 +223,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(676, 369);
+            this.tabPage2.Size = new System.Drawing.Size(685, 373);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Заказы";
             // 
@@ -231,9 +231,9 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(248, 318);
+            this.button1.Location = new System.Drawing.Point(248, 322);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 42);
+            this.button1.Size = new System.Drawing.Size(203, 42);
             this.button1.TabIndex = 19;
             this.button1.Text = "Дозаказ";
             this.button1.UseVisualStyleBackColor = true;
@@ -242,7 +242,7 @@
             // CopyOrders
             // 
             this.CopyOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CopyOrders.Location = new System.Drawing.Point(7, 318);
+            this.CopyOrders.Location = new System.Drawing.Point(7, 322);
             this.CopyOrders.Name = "CopyOrders";
             this.CopyOrders.Size = new System.Drawing.Size(194, 42);
             this.CopyOrders.TabIndex = 18;
@@ -253,7 +253,7 @@
             // FindOrders
             // 
             this.FindOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FindOrders.Location = new System.Drawing.Point(552, 9);
+            this.FindOrders.Location = new System.Drawing.Point(561, 9);
             this.FindOrders.Name = "FindOrders";
             this.FindOrders.Size = new System.Drawing.Size(117, 27);
             this.FindOrders.TabIndex = 17;
@@ -272,7 +272,7 @@
             this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrders.Location = new System.Drawing.Point(7, 42);
             this.dataGridViewOrders.Name = "dataGridViewOrders";
-            this.dataGridViewOrders.Size = new System.Drawing.Size(661, 270);
+            this.dataGridViewOrders.Size = new System.Drawing.Size(670, 274);
             this.dataGridViewOrders.TabIndex = 16;
             // 
             // searchOrders
@@ -290,13 +290,13 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(415, 9);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(131, 26);
+            this.comboBox2.Size = new System.Drawing.Size(140, 26);
             this.comboBox2.TabIndex = 14;
             // 
             // SaveOrders
             // 
             this.SaveOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveOrders.Location = new System.Drawing.Point(475, 318);
+            this.SaveOrders.Location = new System.Drawing.Point(484, 322);
             this.SaveOrders.Name = "SaveOrders";
             this.SaveOrders.Size = new System.Drawing.Size(194, 42);
             this.SaveOrders.TabIndex = 13;
@@ -306,18 +306,16 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(5, 47);
+            this.tabControl1.Location = new System.Drawing.Point(0, 40);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(684, 400);
+            this.tabControl1.Size = new System.Drawing.Size(693, 404);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tabPage4
             // 
@@ -326,22 +324,20 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(676, 369);
+            this.tabPage4.Size = new System.Drawing.Size(685, 373);
             this.tabPage4.TabIndex = 2;
             this.tabPage4.Text = "Отчёты";
             // 
             // tabControl2
             // 
-            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Controls.Add(this.tabPage7);
-            this.tabControl2.Location = new System.Drawing.Point(6, 15);
+            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl2.Location = new System.Drawing.Point(3, 3);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(665, 351);
+            this.tabControl2.Size = new System.Drawing.Size(679, 367);
             this.tabControl2.TabIndex = 13;
             // 
             // tabPage5
@@ -355,7 +351,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 27);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(657, 320);
+            this.tabPage5.Size = new System.Drawing.Size(671, 336);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Поставщики";
             // 
@@ -365,7 +361,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(220, 295);
+            this.checkBox2.Location = new System.Drawing.Point(234, 308);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(233, 22);
             this.checkBox2.TabIndex = 27;
@@ -375,7 +371,7 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.Location = new System.Drawing.Point(6, 290);
+            this.button4.Location = new System.Drawing.Point(6, 303);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 30);
             this.button4.TabIndex = 26;
@@ -386,7 +382,7 @@
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(531, 290);
+            this.button5.Location = new System.Drawing.Point(545, 303);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(120, 30);
             this.button5.TabIndex = 25;
@@ -407,7 +403,7 @@
             "г. Самара, БИК 043602955, кopp/c 30101810700000000955"});
             this.listBox1.Location = new System.Drawing.Point(6, 6);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(645, 76);
+            this.listBox1.Size = new System.Drawing.Size(659, 76);
             this.listBox1.TabIndex = 14;
             // 
             // dataGridSupplierReport
@@ -428,7 +424,7 @@
             this.dataGridSupplierReport.Location = new System.Drawing.Point(6, 90);
             this.dataGridSupplierReport.Name = "dataGridSupplierReport";
             this.dataGridSupplierReport.ReadOnly = true;
-            this.dataGridSupplierReport.Size = new System.Drawing.Size(645, 195);
+            this.dataGridSupplierReport.Size = new System.Drawing.Size(659, 201);
             this.dataGridSupplierReport.TabIndex = 9;
             this.dataGridSupplierReport.VisibleChanged += new System.EventHandler(this.dataGridSupplierReport_VisibleChanged);
             // 
@@ -473,7 +469,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 27);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(657, 320);
+            this.tabPage6.Size = new System.Drawing.Size(671, 336);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Отстатки/недостатки";
             // 
@@ -483,7 +479,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(220, 295);
+            this.checkBox1.Location = new System.Drawing.Point(234, 308);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(233, 22);
             this.checkBox1.TabIndex = 24;
@@ -493,7 +489,7 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.Location = new System.Drawing.Point(6, 290);
+            this.button3.Location = new System.Drawing.Point(6, 303);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 30);
             this.button3.TabIndex = 18;
@@ -504,7 +500,7 @@
             // findPreparationsBranch
             // 
             this.findPreparationsBranch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.findPreparationsBranch.Location = new System.Drawing.Point(531, 290);
+            this.findPreparationsBranch.Location = new System.Drawing.Point(545, 303);
             this.findPreparationsBranch.Name = "findPreparationsBranch";
             this.findPreparationsBranch.Size = new System.Drawing.Size(120, 30);
             this.findPreparationsBranch.TabIndex = 17;
@@ -525,7 +521,7 @@
             "г. Самара, БИК 043602955, кopp/c 30101810700000000955"});
             this.listBox3.Location = new System.Drawing.Point(6, 6);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(645, 76);
+            this.listBox3.Size = new System.Drawing.Size(659, 76);
             this.listBox3.TabIndex = 13;
             // 
             // dataGridPreparationsBranch
@@ -546,7 +542,7 @@
             this.dataGridPreparationsBranch.Location = new System.Drawing.Point(6, 90);
             this.dataGridPreparationsBranch.Name = "dataGridPreparationsBranch";
             this.dataGridPreparationsBranch.ReadOnly = true;
-            this.dataGridPreparationsBranch.Size = new System.Drawing.Size(645, 195);
+            this.dataGridPreparationsBranch.Size = new System.Drawing.Size(659, 201);
             this.dataGridPreparationsBranch.TabIndex = 12;
             this.dataGridPreparationsBranch.VisibleChanged += new System.EventHandler(this.dataGridPreparationsBranch_VisibleChanged);
             // 
@@ -591,7 +587,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 27);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(657, 320);
+            this.tabPage7.Size = new System.Drawing.Size(671, 336);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Просрочка";
             // 
@@ -601,7 +597,7 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.Checked = true;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Location = new System.Drawing.Point(220, 295);
+            this.checkBox3.Location = new System.Drawing.Point(234, 308);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(233, 22);
             this.checkBox3.TabIndex = 28;
@@ -611,7 +607,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.Location = new System.Drawing.Point(6, 290);
+            this.button2.Location = new System.Drawing.Point(6, 303);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 30);
             this.button2.TabIndex = 20;
@@ -622,7 +618,7 @@
             // SaveReports
             // 
             this.SaveReports.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveReports.Location = new System.Drawing.Point(531, 290);
+            this.SaveReports.Location = new System.Drawing.Point(545, 303);
             this.SaveReports.Name = "SaveReports";
             this.SaveReports.Size = new System.Drawing.Size(120, 30);
             this.SaveReports.TabIndex = 11;
@@ -643,7 +639,7 @@
             "г. Самара, БИК 043602955, кopp/c 30101810700000000955"});
             this.listBox4.Location = new System.Drawing.Point(6, 6);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(645, 76);
+            this.listBox4.Size = new System.Drawing.Size(654, 76);
             this.listBox4.TabIndex = 16;
             // 
             // dataGridDelay
@@ -664,7 +660,7 @@
             this.dataGridDelay.Location = new System.Drawing.Point(6, 90);
             this.dataGridDelay.Name = "dataGridDelay";
             this.dataGridDelay.ReadOnly = true;
-            this.dataGridDelay.Size = new System.Drawing.Size(645, 195);
+            this.dataGridDelay.Size = new System.Drawing.Size(659, 201);
             this.dataGridDelay.TabIndex = 15;
             this.dataGridDelay.VisibleChanged += new System.EventHandler(this.dataGridDelay_VisibleChanged);
             // 
@@ -701,7 +697,7 @@
             // button10
             // 
             this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button10.Location = new System.Drawing.Point(561, 44);
+            this.button10.Location = new System.Drawing.Point(565, 38);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(117, 27);
             this.button10.TabIndex = 10;

@@ -140,6 +140,7 @@
             this.Name = "Users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сотрудники";
+            this.Activated += new System.EventHandler(this.Users_Activated);
             this.Load += new System.EventHandler(this.Users_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorkers)).EndInit();
             this.ResumeLayout(false);

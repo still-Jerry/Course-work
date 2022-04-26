@@ -14,7 +14,7 @@ namespace AISHospitalPharmacy
 {
     public partial class Users : Form
     {
-        
+        public static Boolean chSaveUsers = false;
         public Users()
         {
             InitializeComponent();
@@ -90,6 +90,8 @@ namespace AISHospitalPharmacy
 
         private void SaveWorkers_Click(object sender, EventArgs e)
         {
+            chSaveUsers = true;
+            CopyWorkers.Enabled = true;
             //переменная разрешающая перезаписывать файл только при отсуствии некорректностей
             Boolean err = true;
             for (int j = 0; j < dataGridViewWorkers.Rows.Count - 1; j++)
@@ -220,6 +222,18 @@ namespace AISHospitalPharmacy
             catch (Exception y)
             {
                 MessageBox.Show("Ошибка при архивировании файла \"Сотрудники.txt\"\n" + y.ToString());
+            }
+        }
+
+        private void Users_Activated(object sender, EventArgs e)
+        {
+            if (chSaveUsers)
+            {
+                CopyWorkers.Enabled = true;
+            }
+            else
+            {
+                CopyWorkers.Enabled = false;
             }
         }
 
